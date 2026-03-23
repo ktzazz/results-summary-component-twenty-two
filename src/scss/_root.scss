@@ -1,0 +1,27 @@
+/* mapeo de $ a -- */
+
+@use "variables" as v;
+
+:root {
+  --lightRed: #{v.$clr-p-lightRed};
+  --orangeyYellow: #{v.$clr-p-orangeyYellow};
+  --greenTeal: #{v.$clr-p-greenTeal};
+  --cobaltBlue: #{v.$clr-p-cobaltBlue};
+
+  --grdBg-lightSlateBlue: #{v.$grdnt-bg-lightSlateBlue};
+  --grdBg-lightRoyalBlue: #{v.$grdnt-bg-lightRoyalBlue};
+
+  --circle-violetBlue: #{v.$clr-circle-violetBlue};
+  --circle-persianBlue: #{v.$clr-circle-persianBlue};
+
+  --white: #{v.$clr-white};
+  --paleBlue: #{v.$clr-paleBlue};
+  --lightLavender: #{v.$clr-lightLavender};
+  --darkGrayBlue: #{v.$clr-darkGrayBlue};
+
+  --font: #{v.$font};
+  --fontSize: #{v.$font-size};
+  --regular: #{v.$font-weight-regular};
+  --bold: #{v.$font-weight-bold};
+  --extraBold: #{v.$font-weight-extraBold};
+}

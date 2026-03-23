@@ -1,0 +1,22 @@
+@use "sass:math";
+
+// px to rem function
+@function rem($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1rem;
+}
+
+@mixin responsive($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+$breakpoints: (
+  mobile: 23.125em,
+  // 375px (iPhone estándar)
+  tablet: 47.5em,
+  // 760px (iPad/Tablets)
+  desktop: 64em,
+  // 1024px (Laptops/Tablets Pro)
+  desktop-lg: 90em, // 1440px (Monitor de escritorio)
+);
