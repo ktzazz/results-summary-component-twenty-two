@@ -1,20 +1,34 @@
 import "./scss/App.scss"; // Cambiamos .css por .scss
-
+import { Result } from "./average.jsx";
+import { Summary } from "./dataTests.jsx";
 function App() {
   return (
     <>
       <main>
-        <p>
-          Your Result 76 of 100 Great You scored higher than 65% of the people
-          who have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100
-          Verbal 61 / 100 Visual 72 / 100
-          <button>Continue</button>
-        </p>
+        <div className="main__container">
+          <div className="result__container">
+            <h2 className="result__title">Your Result</h2>
+            <div className="circle__container">
+              <>
+                <Result />
+              </>
+              <p className="100__p">of 100</p>
+            </div>
+            <>etiqueta para el mensaje</>
+          </div>
+
+          <div className="summary__container">
+            <h2 className="summary__title">Summary</h2>
+            <>
+              <Summary />
+            </>
+            <button className="summary__button">Continue</button>
+          </div>
+        </div>
       </main>
 
       <footer className="attribution">
         {" "}
-        {/* Cambiado a className */}
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -23,7 +37,8 @@ function App() {
         >
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Tu Nombre</a>.
+        . Coded by{" "}
+        <a href="https://www.frontendmentor.io/profile/ktzazz">Katia Aragón</a>.
       </footer>
     </>
   );
