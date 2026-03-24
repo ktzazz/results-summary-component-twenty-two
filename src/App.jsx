@@ -1,7 +1,29 @@
 import "./scss/App.scss"; // Cambiamos .css por .scss
 import { Result } from "./average.jsx";
 import { Summary } from "./dataTests.jsx";
+import { useState, useEffect } from "react";
+
 function App() {
+  const [average, setAverage] = useState(0);
+  const [tests, setTests] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("data.json");
+      const data = await res.json();
+
+      // se guarda la lista
+      setTests(data);
+
+      // calcula el promedio
+      let suma = 0;
+      data.forEach((item) => (suma += item.score));
+      setAverage(Math.floor(suma / data.length));
+    };
+
+    getData(); // <-- Solo la llamas así
+  }, []);
+
   return (
     <>
       <main>
@@ -10,7 +32,8 @@ function App() {
             <h2 className="result__title">Your Result</h2>
             <div className="circle__container">
               <>
-                <Result />
+                <Result promedio={average} />{" "}
+                {/* prop es el alias que se le da a la informacion que se quiera pasar a otro componente */}
               </>
               <p className="100__p">of 100</p>
             </div>
@@ -20,7 +43,7 @@ function App() {
           <div className="summary__container">
             <h2 className="summary__title">Summary</h2>
             <>
-              <Summary />
+              <Summary resultados={tests} />
             </>
             <button className="summary__button">Continue</button>
           </div>
