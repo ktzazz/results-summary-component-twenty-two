@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [average, setAverage] = useState(0);
   const [tests, setTests] = useState([]);
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -32,7 +33,7 @@ function App() {
             <h2 className="result__title">Your Result</h2>
             <div className="circle__container">
               <>
-                <Result promedio={average} />{" "}
+                <Result promedio={average} activar={start} />{" "}
                 {/* prop es el alias que se le da a la informacion que se quiera pasar a otro componente */}
               </>
               <p className="100__p">of 100</p>
@@ -43,9 +44,14 @@ function App() {
           <div className="summary__container">
             <h2 className="summary__title">Summary</h2>
             <>
-              <Summary resultados={tests} />
+              <Summary resultados={tests} mostrando={start} />
             </>
-            <button className="summary__button">Continue</button>
+            <button
+              className={start === true ? "button__on " : "button__off"}
+              onClick={() => setStart(true)}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </main>
