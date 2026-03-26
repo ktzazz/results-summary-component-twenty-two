@@ -36,7 +36,6 @@ function App() {
                 <Result promedio={average} activar={start} />{" "}
                 {/* prop es el alias que se le da a la informacion que se quiera pasar a otro componente */}
               </>
-              <p className="100__p">of 100</p>
             </div>
             <>etiqueta para el mensaje</>
           </div>

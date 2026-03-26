@@ -6,10 +6,14 @@ export const Result = ({ promedio, activar }) => {
 
   useEffect(() => {
     if (activar && loading < promedio) {
+      /* Solo empieza si 'activar' es true y no hemos llegado al score */
       const interval = setInterval(() => {
-        setLoading((prev) => prev + 1);
-      }, 20);
-      return () => clearInterval(interval);
+        setLoading(
+          (prev) => prev + 1,
+        ); /* el prev hace que saque el valor inicial de loading */
+      }, 20); /* cada 20 milisegundos se aumenta en 1 */
+      return () =>
+        clearInterval(interval); /* limpieza para que no se vuelva loco */
     }
   }, [activar, loading, promedio]);
 
