@@ -18,5 +18,15 @@
 
 body {
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font);
+}
+
+#root {
+  display: flex;
+  flex: 1; /* Esto obliga al root a estirarse todo lo que mide el body */
+  justify-content: center; /* Centra el main horizontalmente */
+  align-items: center; /* Centra el main verticalmente */
 }

@@ -1,14 +1,8 @@
 @use "sass:math";
-
+@use "sass:map";
 // px to rem function
 @function rem($pixels, $context: 16) {
   @return math.div($pixels, $context) * 1rem;
-}
-
-@mixin responsive($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
-    @content;
-  }
 }
 
 $breakpoints: (
@@ -20,3 +14,9 @@ $breakpoints: (
   // 1024px (Laptops/Tablets Pro)
   desktop-lg: 90em, // 1440px (Monitor de escritorio)
 );
+
+@mixin responsive($size) {
+  @media (min-width: map.get($breakpoints, $size)) {
+    @content;
+  }
+}
