@@ -1,4 +1,5 @@
 /* fuentes de google, reset de css */
+@use "mixins" as m;
 
 @font-face {
   font-family: "Hanken Grotesk";
@@ -22,11 +23,23 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font);
+  background-color: var(--lightLavender);
+  @include m.responsive(tablet) {
+    justify-content: center;
+  }
 }
 
+/* #root {
+   display: flex;
+  flex: 1; Esto obliga al root a estirarse todo lo que mide el body 
+  justify-content: center; Centra el main horizontalmente 
+  min-width: 100%;
+  @include m.responsive(tablet) {
+    align-items: center; /* Centra el main verticalmente 
+  }
+} 
+ */
+
 #root {
-  display: flex;
-  flex: 1; /* Esto obliga al root a estirarse todo lo que mide el body */
-  justify-content: center; /* Centra el main horizontalmente */
-  align-items: center; /* Centra el main verticalmente */
+  width: 100%;
 }
