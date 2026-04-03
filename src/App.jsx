@@ -7,6 +7,7 @@ function App() {
   const [average, setAverage] = useState(0);
   const [tests, setTests] = useState([]);
   const [start, setStart] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -22,13 +23,29 @@ function App() {
       setAverage(Math.floor(suma / data.length));
     };
 
-    getData(); // <-- Solo la llamas así
+    getData();
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (start === true) {
+        setActive(true);
+      }
+    }, 2500);
+
+    // Cleanup
+    return () => clearTimeout(timer);
+  }, [start]);
 
   return (
     <>
       <main className="app__main">
-        <div className="main__container">
+        <div className="main__container ">
+          <div
+            className={active === true ? "main__bg main__active" : "main__bg"}
+          >
+            {" "}
+          </div>
           <div className="result__container">
             <h2 className="result__title">Your Result</h2>
             <div className="circle__container">
