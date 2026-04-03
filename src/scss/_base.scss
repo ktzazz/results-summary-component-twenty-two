@@ -41,5 +41,6 @@ body {
  */
 
 #root {
-  width: 100%;
+  display: grid;
+  min-height: 100vh;
 }

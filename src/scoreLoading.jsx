@@ -13,7 +13,7 @@ export const ScoreLoading = ({ icon, category, score, mostrando, index }) => {
   }, [mostrando, loading, score]);
 
   return (
-    <div className={`summary__container cont_${index}`}>
+    <div className={`score__container cont_${index}`}>
       <img src={icon} alt="" />
       <span className="category">{category}</span>
       <span className="score">{mostrando ? loading : "-"}</span>

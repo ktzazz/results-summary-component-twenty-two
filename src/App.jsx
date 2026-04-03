@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className="app__main">
         <div className="main__container">
           <div className="result__container">
             <h2 className="result__title">Your Result</h2>
@@ -37,7 +37,6 @@ function App() {
                 {/* prop es el alias que se le da a la informacion que se quiera pasar a otro componente */}
               </>
             </div>
-            <>etiqueta para el mensaje</>
           </div>
 
           <div className="summary__container">

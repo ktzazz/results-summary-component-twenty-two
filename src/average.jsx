@@ -24,6 +24,12 @@ export const Result = ({ promedio, activar }) => {
         <p className="final__score">{loading}</p>
         <p className="100__p">of 100</p>
       </div>
+      <div className="result__message">
+        <h3 className="result__title">Great</h3>
+        <p className="result__text">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
     </main>
   );
 };
