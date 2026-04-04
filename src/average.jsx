@@ -23,7 +23,13 @@ export const Result = ({ promedio, activar, timer }) => {
       {/* Aquí se usa el bloque del número */}
 
       <div className="circle__result">
-        <p className="final__score">{loading}</p>
+        <p
+          className={
+            loading === promedio ? "final__score scoreStyled" : "final__score"
+          }
+        >
+          {loading}
+        </p>
         <p className="of__total">of 100</p>
       </div>
       <div className="result__message">

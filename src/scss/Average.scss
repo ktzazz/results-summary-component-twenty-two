@@ -4,6 +4,9 @@
   display: grid;
   grid-template-rows: 1fr 0.5fr;
   margin-block-start: m.rem(20);
+  @include m.responsive(desktop) {
+    margin-block-start: 0;
+  }
 }
 
 .circle__result {
@@ -37,6 +40,22 @@
   color: var(--white);
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scoreStyled {
+  animation: scale 0.8s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
 .of__total {
   color: rgba(200, 199, 255, 0.5);
   font-size: m.rem(15);
@@ -46,7 +65,7 @@
 .result__message {
   display: flex;
   flex-direction: column;
-  gap: m.rem(10);
+  gap: m.rem(7);
   text-align: center;
   align-self: self-end;
 }
@@ -55,7 +74,7 @@
   color: var(--white);
   font-size: m.rem(20);
   @include m.responsive(desktop) {
-    font-size: m.rem(25);
+    font-size: m.rem(27);
   }
 }
 
@@ -66,6 +85,6 @@
     font-size: m.rem(13);
   }
   @include m.responsive(desktop) {
-    font-size: m.rem(18);
+    font-size: m.rem(20);
   }
 }
