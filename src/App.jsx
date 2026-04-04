@@ -46,20 +46,32 @@ function App() {
           >
             {" "}
           </div>
-          <div className="result__container">
+          <div
+            className={
+              active === true
+                ? "result__container result__active"
+                : "result__container "
+            }
+          >
             <h2 className="result__title">Your Result</h2>
             <div className="circle__container">
               <>
-                <Result promedio={average} activar={start} />{" "}
+                <Result promedio={average} activar={start} timer={active} />{" "}
                 {/* prop es el alias que se le da a la informacion que se quiera pasar a otro componente */}
               </>
             </div>
           </div>
 
-          <div className="summary__container">
+          <div
+            className={
+              active === true
+                ? "summary__container summary__active"
+                : "summary__container "
+            }
+          >
             <h2 className="summary__title">Summary</h2>
             <>
-              <Summary resultados={tests} mostrando={start} />
+              <Summary resultados={tests} mostrando={start} timer={active} />
             </>
             <button
               className={start === true ? "button__on " : "button__off"}

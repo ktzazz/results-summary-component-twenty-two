@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "sass:map";
+
 // px to rem function
 @function rem($pixels, $context: 16) {
   @return math.div($pixels, $context) * 1rem;
