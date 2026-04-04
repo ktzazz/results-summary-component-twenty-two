@@ -5,6 +5,11 @@ $clr-p-orangeyYellow: hsl(39, 100%, 56%);
 $clr-p-greenTeal: hsl(166, 100%, 37%);
 $clr-p-cobaltBlue: hsl(234, 85%, 45%);
 
+$red: hsla(0, 100%, 67%, 0.2);
+$orange: hsla(39, 100%, 56%, 0.2);
+$green: hsla(166, 100%, 37%, 0.2);
+$cobalt: hsla(234, 85%, 45%, 0.2);
+
 $grdnt-bg-lightSlateBlue: hsl(252, 100%, 67%);
 $grdnt-bg-lightRoyalBlue: hsl(241, 81%, 54%);
 
@@ -15,6 +20,8 @@ $clr-white: hsl(0, 0%, 100%);
 $clr-paleBlue: hsl(221, 100%, 96%);
 $clr-lightLavender: hsl(241, 100%, 89%);
 $clr-darkGrayBlue: hsl(224, 30%, 27%);
+
+$textLight: hsla(224, 30%, 27%, 0.4);
 
 $font: "Hanken Grotesk", sans-serif;
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./scss/ScoreLoading.scss";
 
 export const ScoreLoading = ({ icon, category, score, mostrando, index }) => {
   const [loading, setLoading] = useState(0);
@@ -14,10 +15,12 @@ export const ScoreLoading = ({ icon, category, score, mostrando, index }) => {
 
   return (
     <div className={`score__container cont_${index}`}>
-      <img src={icon} alt="" />
+      <img className="image" src={icon} alt="" />
       <span className="category">{category}</span>
-      <span className="score">{mostrando ? loading : "-"}</span>
-      <span className="100"> / 100</span>
+      <div className="numbers">
+        <span className="score">{mostrando ? loading : "-"}</span>
+        <span className="of"> / 100</span>
+      </div>
     </div>
   );
 };

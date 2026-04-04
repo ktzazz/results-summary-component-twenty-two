@@ -26,11 +26,11 @@
 
   @include m.responsive(tablet) {
     align-self: center;
-    width: 75%;
+    width: 80%;
+    height: 80%;
   }
   @include m.responsive(desktop) {
     width: 60%;
-    height: 80%;
   }
 }
 
@@ -82,7 +82,7 @@
   color: var(--lightLavender);
   font-size: m.rem(16);
   @include m.responsive(tablet) {
-    font-size: m.rem(13);
+    font-size: m.rem(15);
   }
   @include m.responsive(desktop) {
     font-size: m.rem(20);

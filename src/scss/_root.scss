@@ -8,6 +8,11 @@
   --greenTeal: #{v.$clr-p-greenTeal};
   --cobaltBlue: #{v.$clr-p-cobaltBlue};
 
+  --bg_red: #{v.$red};
+  --bg_orange: #{v.$orange};
+  --bg_green: #{v.$green};
+  --bg_cobalt: #{v.$cobalt};
+
   --grdBg-lightSlateBlue: #{v.$grdnt-bg-lightSlateBlue};
   --grdBg-lightRoyalBlue: #{v.$grdnt-bg-lightRoyalBlue};
 
@@ -18,6 +23,8 @@
   --paleBlue: #{v.$clr-paleBlue};
   --lightLavender: #{v.$clr-lightLavender};
   --darkGrayBlue: #{v.$clr-darkGrayBlue};
+
+  --textLight: #{v.$textLight};
 
   --font: #{v.$font};
   --fontSize: #{v.$font-size};
