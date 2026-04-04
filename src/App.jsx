@@ -71,7 +71,7 @@ function App() {
           >
             <h2 className="summary__title">Summary</h2>
             <>
-              <Summary resultados={tests} mostrando={start} timer={active} />
+              <Summary resultados={tests} mostrando={start} />
             </>
             <button
               className={start === true ? "button__on " : "button__off"}
