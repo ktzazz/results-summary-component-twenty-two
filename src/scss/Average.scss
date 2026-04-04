@@ -15,8 +15,8 @@
   justify-content: center;
   align-items: center;
   justify-self: center;
-  width: 50%;
-  height: 90%;
+  width: min(calc(m.rem(160) + 1vw), m.rem(170));
+  height: min(calc(m.rem(170) - 2vh), m.rem(180));
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
@@ -26,11 +26,7 @@
 
   @include m.responsive(tablet) {
     align-self: center;
-    width: 80%;
-    height: 80%;
-  }
-  @include m.responsive(desktop) {
-    width: 60%;
+    height: min(calc(m.rem(180) - 2vh), m.rem(190));
   }
 }
 
