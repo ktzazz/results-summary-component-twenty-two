@@ -1,0 +1,71 @@
+@use "mixins" as m;
+
+.result__main {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+  margin-block-start: m.rem(20);
+}
+
+.circle__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 50%;
+  height: 90%;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--circle-violetBlue),
+    var(--circle-persianBlue)
+  );
+
+  @include m.responsive(tablet) {
+    align-self: center;
+    width: 75%;
+  }
+  @include m.responsive(desktop) {
+    width: 60%;
+    height: 80%;
+  }
+}
+
+.final__score {
+  font-size: m.rem(50);
+  font-weight: var(--extraBold);
+  color: var(--white);
+}
+
+.of__total {
+  color: rgba(200, 199, 255, 0.5);
+  font-size: m.rem(15);
+  font-weight: var(--regular);
+}
+
+.result__message {
+  display: flex;
+  flex-direction: column;
+  gap: m.rem(10);
+  text-align: center;
+  align-self: self-end;
+}
+
+.result__h3 {
+  color: var(--white);
+  font-size: m.rem(20);
+  @include m.responsive(desktop) {
+    font-size: m.rem(25);
+  }
+}
+
+.result__text {
+  color: var(--lightLavender);
+  font-size: m.rem(16);
+  @include m.responsive(tablet) {
+    font-size: m.rem(13);
+  }
+  @include m.responsive(desktop) {
+    font-size: m.rem(18);
+  }
+}
