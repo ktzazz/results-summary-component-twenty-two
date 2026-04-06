@@ -1,9 +1,9 @@
 @use "mixins" as m;
 
-* {
+/* * {
   outline: 1px solid red;
 }
-
+ */
 .app__main {
   display: grid;
   @include m.responsive(tablet) {
@@ -18,7 +18,7 @@
   height: 100%;
   width: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
   background-color: var(--white);
 
   @include m.responsive(tablet) {
@@ -192,7 +192,11 @@
 }
 
 footer {
-  position: absolute;
-  bottom: m.rem(15);
-  justify-self: center;
+  margin-block-end: m.rem(15);
+  @include m.responsive(tablet) {
+    position: absolute;
+    bottom: m.rem(15);
+    justify-self: center;
+    margin-block-end: 0;
+  }
 }
