@@ -80,6 +80,7 @@ function App() {
               <Summary resultados={tests} mostrando={start} />
             </>
             <button
+              type="button"
               className={start === true ? "button__on " : "button__off"}
               onClick={() => setStart(true)}
             >
