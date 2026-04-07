@@ -39,8 +39,14 @@ function App() {
 
   return (
     <>
-      <main className="app__main">
-        <div className="main__container ">
+      <main className={active === true ? "app__main" : "app__main no-scroll"}>
+        <div
+          className={
+            active === true
+              ? "main__container main__cont__active"
+              : "main__container"
+          }
+        >
           <div
             className={active === true ? "main__bg main__active" : "main__bg"}
           >
